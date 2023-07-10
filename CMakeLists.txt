@@ -4,6 +4,8 @@ project(Calculadora VERSION 0.0.2)
 
 set(CMAKE_CXX_STANDARD 20)
 
+enable_testing()
+
 add_subdirectory(utils)
 add_subdirectory(math)
 

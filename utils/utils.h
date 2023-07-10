@@ -18,6 +18,6 @@
 /// @brief Semantic versioning extension/extra for the util library.
 #define UTILS_VERSION_EXTRA "alpha"
 /// @brief Build number for the version.
-#define UTILS_VERSION_BUILD 2
+#define UTILS_VERSION_BUILD 5
 
 #endif /* UTILS_H */
