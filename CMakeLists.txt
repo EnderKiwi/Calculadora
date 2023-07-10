@@ -9,3 +9,8 @@ add_subdirectory(math)
 
 add_executable(Calculadora main.c Calculadora.c Calculadora.h license.c license.h)
 target_link_libraries(Calculadora utils math)
+
+add_test(NAME CalculadoraTest COMMAND Calculadora)
+add_test(NAME CalculadoraTestHelp COMMAND Calculadora --help)
+add_test(NAME CalculadoraTestVersion COMMAND Calculadora --version)
+add_test(NAME CalculadoraTestLicense COMMAND Calculadora --license)
