@@ -4,9 +4,9 @@
  ******************************************************************************
  * Created 2023-07-09 by EnderKiwi.
  */
-#ifndef UTIL_EXCEPT_H
-#define UTIL_EXCEPT_H
+#ifndef UTILS_EXCEPT_H
+#define UTILS_EXCEPT_H
 
 
 
-#endif /* UTIL_EXCEPT_H */
+#endif /* UTILS_EXCEPT_H */

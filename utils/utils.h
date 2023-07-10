@@ -1,4 +1,4 @@
-/* util.h - v0.0.1-alpha by EnderKiwi (Alex M.)
+/* utils.h - v0.0.1-alpha by EnderKiwi (Alex M.)
  ******************************************************************************
  * A collection of utility functions
  * See terminal.h for terminal functions.
@@ -6,18 +6,18 @@
  ******************************************************************************
  * Created 2023-07-09 by EnderKiwi.
  */
-#ifndef UTIL_H
-#define UTIL_H
+#ifndef UTILS_H
+#define UTILS_H
 
 /// @brief Semantic versioning major version for the util library.
-#define UTIL_VERSION_MAJOR 0
+#define UTILS_VERSION_MAJOR 0
 /// @brief Semantic versioning minor version for the util library.
-#define UTIL_VERSION_MINOR 0
+#define UTILS_VERSION_MINOR 0
 /// @brief Semantic versioning patch version for the util library.
-#define UTIL_VERSION_PATCH 1
+#define UTILS_VERSION_PATCH 1
 /// @brief Semantic versioning extension/extra for the util library.
-#define UTIL_VERSION_EXTRA "alpha"
+#define UTILS_VERSION_EXTRA "alpha"
 /// @brief Build number for the version.
-#define UTIL_VERSION_BUILD 2
+#define UTILS_VERSION_BUILD 2
 
-#endif /* UTIL_H */
+#endif /* UTILS_H */

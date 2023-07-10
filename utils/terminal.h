@@ -9,9 +9,9 @@
  ******************************************************************************
  * Created 2023-07-09 by EnderKiwi.
  */
-#ifndef UTIL_TERMINAL_H
-#define UTIL_TERMINAL_H
+#ifndef UTILS_TERMINAL_H
+#define UTILS_TERMINAL_H
 
 
 
-#endif /* UTIL_TERMINAL_H */
+#endif /* UTILS_TERMINAL_H */
