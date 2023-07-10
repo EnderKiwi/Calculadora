@@ -17,6 +17,6 @@
 /// @brief Semantic versioning extension/extra for Calculadora.
 #define CALCULADORA_VERSION_EXTRA "alpha"
 /// @brief Build number for the version.
-#define CALCULADORA_VERSION_BUILD 1
+#define CALCULADORA_VERSION_BUILD 2
 
 #endif /* CALCULADORA_H */

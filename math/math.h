@@ -16,7 +16,7 @@
 /// @brief Semantic versioning extension/extra for the math library.
 #define MATH_VERSION_EXTRA "alpha"
 /// @brief Build number for the version.
-#define MATH_VERSION_BUILD 1
+#define MATH_VERSION_BUILD 2
 
 int end_add(int a, int b);
 int end_sub(int a, int b);
