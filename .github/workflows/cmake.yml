@@ -1,0 +1,50 @@
+# Github build workflow
+name: Build with CMake
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      matrix:
+        config:
+        - {
+            name: "Windows Latest", artifact: "Windows",
+            os: windows-latest,
+          }
+        - {
+            name: "Ubuntu Latest", artifact: "Ubuntu",
+            os: ubuntu-latest,
+          }
+        - {
+            name: "macOS Latest", artifact: "macOS",
+            os: macos-latest,
+          }
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Configure CMake
+        run: cmake -B ${{ github.workspace }}/build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
+
+      - name: Build
+        run: cmake --build ${{ github.workspace }}/build --config ${{ env.BUILD_TYPE }}
+
+#      - name: Test
+#        working-directory: ${{ github.workspace }}/build
+#        run: ctest -C ${{ env.BUILD_TYPE }}
+
+      - name: Upload Binaries
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.config.artifact }}
+          path: ${{ github.workspace }}/build/Calculadora*
