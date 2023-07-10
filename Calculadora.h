@@ -13,10 +13,10 @@
 /// @brief Semantic versioning minor version for Calculadora.
 #define CALCULADORA_VERSION_MINOR 0
 /// @brief Semantic versioning patch version for Calculadora.
-#define CALCULADORA_VERSION_PATCH 1
+#define CALCULADORA_VERSION_PATCH 2
 /// @brief Semantic versioning extension/extra for Calculadora.
 #define CALCULADORA_VERSION_EXTRA "alpha"
 /// @brief Build number for the version.
-#define CALCULADORA_VERSION_BUILD 2
+#define CALCULADORA_VERSION_BUILD 1
 
 #endif /* CALCULADORA_H */

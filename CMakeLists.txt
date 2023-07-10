@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(Calculadora VERSION 0.0.1)
+project(Calculadora VERSION 0.0.2)
 
 set(CMAKE_CXX_STANDARD 20)
 
