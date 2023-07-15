@@ -12,4 +12,10 @@ add_subdirectory(maths)
 add_executable(QuickMaths main.c QuickMaths.c QuickMaths.h license.c license.h)
 target_link_libraries(QuickMaths utils maths)
 
+if(MSVC)
+  target_compile_options(QuickMaths PRIVATE /W4 /WX)
+else()
+  target_compile_options(QuickMaths PRIVATE -Wall -Wextra -Wpedantic -Werror)
+endif()
+
 add_test(NAME QuickMathsTest COMMAND QuickMaths)
