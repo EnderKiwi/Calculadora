@@ -1,4 +1,4 @@
-const char *calculadora_license =
+const char *QuickMaths_license =
 "MIT License\n\
 \n\
 Copyright (c) 2023 EnderKiwi\n\

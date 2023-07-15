@@ -14,10 +14,10 @@
 /// @brief Semantic versioning minor version for the util library.
 #define UTILS_VERSION_MINOR 0
 /// @brief Semantic versioning patch version for the util library.
-#define UTILS_VERSION_PATCH 1
+#define UTILS_VERSION_PATCH 2
 /// @brief Semantic versioning extension/extra for the util library.
 #define UTILS_VERSION_EXTRA "alpha"
 /// @brief Build number for the version.
-#define UTILS_VERSION_BUILD 5
+#define UTILS_VERSION_BUILD 1
 
 #endif /* UTILS_H */

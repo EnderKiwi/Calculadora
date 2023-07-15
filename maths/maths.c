@@ -1,4 +1,4 @@
-#include "math.h"
+#include "maths.h"
 
 int end_add(int a, int b)
 {

@@ -1,6 +1,6 @@
-#ifndef CALCULADORA_LICENSE_H
-#define CALCULADORA_LICENSE_H
+#ifndef QUICKMATHS_LICENSE_H
+#define QUICKMATHS_LICENSE_H
 
-extern const char *calculadora_license;
+extern const char *QuickMaths_license;
 
-#endif /* CALCULADORA_LICENSE_H */
+#endif /* QUICKMATHS_LICENSE_H */
