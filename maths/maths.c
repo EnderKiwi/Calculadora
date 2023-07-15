@@ -1,4 +1,11 @@
+#include <stdio.h>
+
 #include "maths.h"
+
+void maths_print_version(void)
+{
+    printf("maths v%d.%d.%d-%s\n", MATHS_VERSION_MAJOR, MATHS_VERSION_MINOR, MATHS_VERSION_PATCH, MATHS_VERSION_EXTRA);
+}
 
 int end_add(int a, int b)
 {

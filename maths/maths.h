@@ -1,4 +1,4 @@
-/* maths.h - v0.0.1-alpha by EnderKiwi (Alex M.)
+/* maths.h - v0.0.2-alpha by EnderKiwi (Alex M.)
  ******************************************************************************
  * A collection of math functions
  ******************************************************************************
@@ -12,9 +12,11 @@
 /// @brief Semantic versioning minor version for the maths library.
 #define MATHS_VERSION_MINOR 0
 /// @brief Semantic versioning patch version for the maths library.
-#define MATHS_VERSION_PATCH 1
+#define MATHS_VERSION_PATCH 2
 /// @brief Semantic versioning extension/extra for the maths library.
 #define MATHS_VERSION_EXTRA "alpha"
+
+void maths_print_version(void);
 
 int end_add(int a, int b);
 int end_sub(int a, int b);

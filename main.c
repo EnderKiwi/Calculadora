@@ -1,11 +1,12 @@
-#include <stdio.h>
-#include <string.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "QuickMaths.h"
+#include "maths/maths.h"
 #include "utils/utils.h"
 #include "utils/terminal.h"
-#include "maths/maths.h"
-#include "license.h"
 
 /**
  * @brief Parses the command line arguments.
@@ -42,60 +43,17 @@ static int parse_args(int argc, char **argv)
      // Loop through arguments
      // If they are prefixed with '--' ignore everything else
      for (int i = 1; i < argc; i++) {
-          int len = strlen(argv[i]);
+          //int len = strlen(argv[i]);
           if (strcmp(argv[i], "--help") == 0) {
-               printf("USAGE: quickmaths [OPTIONS] [EXPRESSION]\n");
-               puts("");
-               printf("OPTIONS:\n");
-               printf("  --help\n");
-               printf("  --version\n");
-               printf("  --interactive\n");
-               printf("  --license\n");
-               puts("");
-               printf("EXPRESSION:\n");
-               printf("  A mathematical expression to be evaluated.\n");
-               printf("    e.g. 1 + 1\n");
-               printf("  If not provided, enter interactive mode.\n");
-               puts("");
-               printf("QuickMaths v%d.%d.%d-%s\n",
-                    QUICKMATHS_VERSION_MAJOR,
-                    QUICKMATHS_VERSION_MINOR,
-                    QUICKMATHS_VERSION_PATCH,
-                    QUICKMATHS_VERSION_EXTRA);
-               puts("Copyright (c) 2023 EnderKiwi");
+               QuickMaths_cmd_help();
                return 0;
           }
           if (strcmp(argv[i], "--version") == 0) {
-               printf("QuickMaths v%d.%d.%d-%s\n",
-                    QUICKMATHS_VERSION_MAJOR,
-                    QUICKMATHS_VERSION_MINOR,
-                    QUICKMATHS_VERSION_PATCH,
-                    QUICKMATHS_VERSION_EXTRA);
-               puts("");
-               puts("Libraries:");
-               printf("  maths v%d.%d.%d-%s\n",
-                    MATHS_VERSION_MAJOR,
-                    MATHS_VERSION_MINOR,
-                    MATHS_VERSION_PATCH,
-                    MATHS_VERSION_EXTRA);
-               printf("  utils v%d.%d.%d-%s\n",
-                    UTILS_VERSION_MAJOR,
-                    UTILS_VERSION_MINOR,
-                    UTILS_VERSION_PATCH,
-                    UTILS_VERSION_EXTRA);
-               puts("");
-               puts("QuickMaths, maths, and utils are licensed under the MIT License.");
-               puts("Use --license to view the license and other information.");
-               puts("Copyright (c) 2023 EnderKiwi");
+               QuickMaths_cmd_version();
                return 0;
           }
           if (strcmp(argv[i], "--license") == 0) {
-               puts("QuickMaths, as well as it's accompanying maths and utils libraries, are all");
-               puts("licensed under the MIT License and are owned by EnderKiwi.");
-               puts("");
-               puts(QuickMaths_license);
-               puts("");
-               
+               QuickMaths_cmd_license();
                return 0;
           }
           if (strcmp(argv[i], "--interactive") == 0) {

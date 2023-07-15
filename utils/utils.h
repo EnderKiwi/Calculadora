@@ -1,4 +1,4 @@
-/* utils.h - v0.0.3-alpha by EnderKiwi (Alex M.)
+/* utils.h - v0.0.4-alpha by EnderKiwi (Alex M.)
  ******************************************************************************
  * A collection of utility functions
  * See terminal.h for terminal functions.
@@ -14,8 +14,10 @@
 /// @brief Semantic versioning minor version for the util library.
 #define UTILS_VERSION_MINOR 0
 /// @brief Semantic versioning patch version for the util library.
-#define UTILS_VERSION_PATCH 3
+#define UTILS_VERSION_PATCH 4
 /// @brief Semantic versioning extension/extra for the util library.
 #define UTILS_VERSION_EXTRA "alpha"
+
+void utils_print_version(void);
 
 #endif /* UTILS_H */
