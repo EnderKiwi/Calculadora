@@ -57,36 +57,32 @@ static int parse_args(int argc, char **argv)
                printf("    e.g. 1 + 1\n");
                printf("  If not provided, enter interactive mode.\n");
                puts("");
-               printf("QuickMaths v%d.%d.%d-%s build %d\n",
+               printf("QuickMaths v%d.%d.%d-%s\n",
                     QUICKMATHS_VERSION_MAJOR,
                     QUICKMATHS_VERSION_MINOR,
                     QUICKMATHS_VERSION_PATCH,
-                    QUICKMATHS_VERSION_EXTRA,
-                    QUICKMATHS_VERSION_BUILD);
+                    QUICKMATHS_VERSION_EXTRA);
                puts("Copyright (c) 2023 EnderKiwi");
                return 0;
           }
           if (strcmp(argv[i], "--version") == 0) {
-               printf("QuickMaths v%d.%d.%d-%s build %d\n",
+               printf("QuickMaths v%d.%d.%d-%s\n",
                     QUICKMATHS_VERSION_MAJOR,
                     QUICKMATHS_VERSION_MINOR,
                     QUICKMATHS_VERSION_PATCH,
-                    QUICKMATHS_VERSION_EXTRA,
-                    QUICKMATHS_VERSION_BUILD);
+                    QUICKMATHS_VERSION_EXTRA);
                puts("");
                puts("Libraries:");
-               printf("  maths v%d.%d.%d-%s build %d\n",
+               printf("  maths v%d.%d.%d-%s\n",
                     MATHS_VERSION_MAJOR,
                     MATHS_VERSION_MINOR,
                     MATHS_VERSION_PATCH,
-                    MATHS_VERSION_EXTRA,
-                    MATHS_VERSION_BUILD);
-               printf("  utils v%d.%d.%d-%s build %d\n",
+                    MATHS_VERSION_EXTRA);
+               printf("  utils v%d.%d.%d-%s\n",
                     UTILS_VERSION_MAJOR,
                     UTILS_VERSION_MINOR,
                     UTILS_VERSION_PATCH,
-                    UTILS_VERSION_EXTRA,
-                    UTILS_VERSION_BUILD);
+                    UTILS_VERSION_EXTRA);
                puts("");
                puts("QuickMaths, maths, and utils are licensed under the MIT License.");
                puts("Use --license to view the license and other information.");

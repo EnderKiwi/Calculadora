@@ -16,7 +16,5 @@
 #define QUICKMATHS_VERSION_PATCH 3
 /// @brief Semantic versioning extension/extra for QuickMaths.
 #define QUICKMATHS_VERSION_EXTRA "alpha"
-/// @brief Build number for the version.
-#define QUICKMATHS_VERSION_BUILD 1
 
 #endif /* QUICKMATHS_H */
