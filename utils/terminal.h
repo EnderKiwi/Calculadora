@@ -1,4 +1,4 @@
-/* terminal.h - v0.0.1-alpha by EnderKiwi (Alex M.)
+/* terminal.h - v0.0.3-alpha by EnderKiwi (Alex M.)
  ******************************************************************************
  * A collection of functions for terminal manipulation.
  * Features: Rich Text (i.e. Color, Bold/Italic/Underline), Cursor Movement,
@@ -11,6 +11,8 @@
  */
 #ifndef UTILS_TERMINAL_H
 #define UTILS_TERMINAL_H
+
+#include <stdio.h>
 
 enum term_codes {
      TERM_BEL = 7, /* Terminal Bell */
