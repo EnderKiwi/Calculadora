@@ -32,7 +32,6 @@ static int parse_args(int argc, char **argv)
      int ret = 0;
      int current = 0;
      int last = 0;
-     bool using_last = false;
      int operation = -1;
      int result = 0;
      bool skip = false;
@@ -104,12 +103,10 @@ static int parse_args(int argc, char **argv)
                };
                printf("%d\n", result);
                last = result;
-               using_last = false;
           } else if (skip) {
                // do nothing
           } else {
                last = current;
-               using_last = true;
           }
           skip = false;
      }
