@@ -36,6 +36,7 @@ static int parse_args(int argc, char **argv)
      int operation = -1;
      int result = 0;
      bool skip = false;
+     bool return_result = false;
      if (argc < 2) {
           // TODO: enter interactive mode
           return 1;
@@ -59,26 +60,29 @@ static int parse_args(int argc, char **argv)
           if (strcmp(argv[i], "--interactive") == 0) {
                ret = 1;
           }
+          if (strcmp(argv[i], "--return") == 0) {
+               return_result = true;
+          }
           // TODO: do maths
-          if (argv[i][0] == '+') {
+          if (strcmp(argv[i], "+") == 0) {
                operation = 0;
                skip = true;
-          } else if (argv[i][0] == '-') {
+          } else if (strcmp(argv[i], "-") == 0) {
                operation = 1;
                skip = true;
-          } else if (argv[i][0] == '*') {
+          } else if (strcmp(argv[i], "*") == 0) {
                operation = 2;
                skip = true;
-          } else if (argv[i][0] == '/') {
+          } else if (strcmp(argv[i], "/") == 0) {
                operation = 3;
                skip = true;
-          } else if (argv[i][0] == '%') {
+          } else if (strcmp(argv[i], "%") == 0) {
                operation = 4;
                skip = true;
           } else {
                current = atoi(argv[i]);
           }
-          if (using_last && operation != -1 && !skip) {
+          if (operation != -1 && !skip) {
                switch (operation) {
                     case 0:
                          result = end_add(last, current);
@@ -101,11 +105,16 @@ static int parse_args(int argc, char **argv)
                printf("%d\n", result);
                last = result;
                using_last = false;
+          } else if (skip) {
+               // do nothing
           } else {
                last = current;
                using_last = true;
           }
           skip = false;
+     }
+     if (return_result) {
+          exit(result);
      }
      return ret;
 }
