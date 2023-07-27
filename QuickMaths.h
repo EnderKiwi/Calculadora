@@ -1,4 +1,4 @@
-/* QuickMaths.h - v0.0.5-alpha by EnderKiwi (Alex M.)
+/* QuickMaths.h - v0.0.6-alpha by EnderKiwi (Alex M.)
  ******************************************************************************
  * A simple calculator program. Currently for terminal only.
  * Made as a learning project for C.
@@ -13,7 +13,7 @@
 /// @brief Semantic versioning minor version for QuickMaths.
 #define QUICKMATHS_VERSION_MINOR 0
 /// @brief Semantic versioning patch version for QuickMaths.
-#define QUICKMATHS_VERSION_PATCH 5
+#define QUICKMATHS_VERSION_PATCH 6
 /// @brief Semantic versioning extension/extra for QuickMaths.
 #define QUICKMATHS_VERSION_EXTRA "alpha"
 

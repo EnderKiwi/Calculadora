@@ -10,40 +10,30 @@ void QuickMaths_print_version(void)
     printf("QuickMaths v%d.%d.%d-%s\n", QUICKMATHS_VERSION_MAJOR, QUICKMATHS_VERSION_MINOR, QUICKMATHS_VERSION_PATCH, QUICKMATHS_VERSION_EXTRA);
 }
 
+static const char *QuickMaths_help = "\
+USAGE: %s [OPTIONS] [EXPRESSION]\n\
+\n\
+OPTIONS:\n\
+  --help"          "\x09"    "See this help message\n\
+  --version"       "\x09"    "Get version information\n\
+  --license"       "\x09"    "Get license information\n\
+  --interactive"   "\x09"    "Enter interactive mode\n\
+  --return"        "\x09"    "Return the result as command output\n\
+\n\
+EXPRESSION:\n\
+  A mathematical expression to be evaluated.\n\
+    e.g. 1 + 1\n\
+  If not provided, enter interactive mode.\n\
+\n";
+
 void QuickMaths_cmd_help(void)
 {
-     printf("USAGE: quickmaths [OPTIONS] [EXPRESSION]\n");
-     puts("");
-     printf("OPTIONS:\n");
-     printf("  --help\n");
-     printf("  --version\n");
-     printf("  --interactive\n");
-     printf("  --license\n");
-     puts("");
-     printf("EXPRESSION:\n");
-     printf("  A mathematical expression to be evaluated.\n");
-     printf("    e.g. 1 + 1\n");
-     printf("  If not provided, enter interactive mode.\n");
-     puts("");
-     QuickMaths_print_version();
-     puts("Copyright (c) 2023 EnderKiwi");
+     QuickMaths_cmd_ahelp("QuickMaths");
 }
 
 void QuickMaths_cmd_ahelp(char *name)
 {
-     printf("USAGE: %s [OPTIONS] [EXPRESSION]\n", name);
-     puts("");
-     printf("OPTIONS:\n");
-     printf("  --help\n");
-     printf("  --version\n");
-     printf("  --interactive\n");
-     printf("  --license\n");
-     puts("");
-     printf("EXPRESSION:\n");
-     printf("  A mathematical expression to be evaluated.\n");
-     printf("    e.g. 1 + 1\n");
-     printf("  If not provided, enter interactive mode.\n");
-     puts("");
+     printf(QuickMaths_help, name);
      QuickMaths_print_version();
      puts("Copyright (c) 2023 EnderKiwi");
 }

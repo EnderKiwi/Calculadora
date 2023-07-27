@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(QuickMaths VERSION 0.0.5)
+project(QuickMaths VERSION 0.0.6)
 
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_STANDARD_REQUIRED true)
