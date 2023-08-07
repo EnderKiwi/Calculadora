@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(QuickMaths VERSION 0.0.6)
+project(QuickMaths VERSION 0.1.0)
 
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_STANDARD_REQUIRED true)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/)
 
 enable_testing()
 
